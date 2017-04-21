@@ -1,9 +1,10 @@
-package com.pisces.basequickadapter;
+package com.pisces.basequickadapter.example;
 
 import android.content.Context;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.pisces.basequickadapter.R;
 import com.pisces.basequickadapter.quickadapter.BaseQuickAdapter;
 import com.pisces.basequickadapter.quickadapter.BaseViewHolder;
 

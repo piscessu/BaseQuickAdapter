@@ -6,6 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.pisces.basequickadapter.example.MovieEntity;
+import com.pisces.basequickadapter.example.MovieQuickAdapter;
 import com.pisces.basequickadapter.quickadapter.BaseQuickAdapter;
 
 import java.util.ArrayList;

@@ -1,5 +1,7 @@
 package com.pisces.basequickadapter;
 
+import com.pisces.basequickadapter.example.MovieEntity;
+
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -1,4 +1,4 @@
-package com.pisces.basequickadapter;
+package com.pisces.basequickadapter.example;
 
 import java.util.List;
 
