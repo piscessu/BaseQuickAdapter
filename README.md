@@ -1,20 +1,14 @@
-package com.pisces.basequickadapter.example;
+# BaseQuickAdapter
+---
+简单封装了下RecyclerViewAdapter，避免每次都要写一堆重复代码
 
-import android.content.Context;
-import android.widget.ImageView;
+---
+1. 设置空布局 setEmptyView();
+2. 设置点击监听 setOnItemClickListener();
 
-import com.bumptech.glide.Glide;
-import com.pisces.basequickadapter.R;
-import com.pisces.basequickadapter.quickadapter.BaseQuickAdapter;
-import com.pisces.basequickadapter.quickadapter.BaseViewHolder;
+---
 
-import java.util.List;
-
-/**
- * Created by PiscesSu on 2017/4/21.
- * Version 1.0
- */
-
+#### 用法
     public class MovieQuickAdapter extends BaseQuickAdapter<MovieEntity.SubjectsBean> {
     private Context mContext;
 
@@ -36,3 +30,12 @@ import java.util.List;
         Glide.with(mContext).load(item.getImages().getMedium()).into((ImageView) holder.getView(R.id.iv));
     }
     }
+---
+
+![https://github.com/piscessu/BaseQuickAdapter/blob/master/screenshots/1.png](http://)
+![https://github.com/piscessu/BaseQuickAdapter/blob/master/screenshots/2.png](http://)
+![https://github.com/piscessu/BaseQuickAdapter/blob/master/screenshots/3.png](http://)
+
+
+---
+**持续改进中。。。**
