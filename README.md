@@ -31,10 +31,8 @@
     }
     }
 ---
-![https://github.com/piscessu/BaseQuickAdapter/blob/master/screenshots/1.png](http://)
-
-![https://github.com/piscessu/BaseQuickAdapter/blob/master/screenshots/2.png](http://)
-
-![https://github.com/piscessu/BaseQuickAdapter/blob/master/screenshots/3.png](http://)
+![](https://github.com/piscessu/BaseQuickAdapter/blob/master/screenshots/1.png)
+![](https://github.com/piscessu/BaseQuickAdapter/blob/master/screenshots/2.png)
+![](https://github.com/piscessu/BaseQuickAdapter/blob/master/screenshots/3.png)
 ---
 **持续改进中。。。**
