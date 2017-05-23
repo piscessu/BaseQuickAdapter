@@ -1,5 +1,6 @@
 package com.pisces.basequickadapter;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements Callback<MovieEnt
     List<MovieEntity.SubjectsBean> mBeanList;
 
     MovieQuickAdapter mQuickAdapter;
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,17 +54,21 @@ public class MainActivity extends AppCompatActivity implements Callback<MovieEnt
         rcv.setAdapter(mQuickAdapter);
 
         //get Data
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("loading...");
+        progressDialog.show();
         RetrofitManager.getService().getTopMovie(0, 10).enqueue(this);
     }
 
     @Override
     public void onResponse(Call<MovieEntity> call, Response<MovieEntity> response) {
+        progressDialog.dismiss();
         mBeanList.addAll(response.body().getSubjects());
         mQuickAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void onFailure(Call<MovieEntity> call, Throwable t) {
-
+        progressDialog.dismiss();
     }
 }

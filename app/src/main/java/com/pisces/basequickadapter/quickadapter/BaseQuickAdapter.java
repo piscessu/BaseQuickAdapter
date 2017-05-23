@@ -34,7 +34,7 @@ public abstract class BaseQuickAdapter<T> extends RecyclerView.Adapter<BaseViewH
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         final BaseViewHolder holder;
         //load empty view
-        if (viewType == EMPTY_VIEW_TYPE && mEmptyLayoutResID != 0) {
+        if (viewType == EMPTY_VIEW_TYPE) {
             View emptyView = LayoutInflater.from(mContext).inflate(mEmptyLayoutResID, parent, false);
             holder = new BaseViewHolder(emptyView);
         } else {
@@ -62,7 +62,7 @@ public abstract class BaseQuickAdapter<T> extends RecyclerView.Adapter<BaseViewH
 
     @Override
     public int getItemCount() {
-        if (data == null || data.size() == 0) {
+        if (data.size() == 0 && mEmptyLayoutResID != 0) {
             return 1;
         }
         return data.size();
@@ -70,7 +70,7 @@ public abstract class BaseQuickAdapter<T> extends RecyclerView.Adapter<BaseViewH
 
     @Override
     public int getItemViewType(int position) {
-        if (data == null || data.size() == 0) {
+        if (data.size() == 0 && mEmptyLayoutResID != 0) {
             return EMPTY_VIEW_TYPE;
         }
         return super.getItemViewType(position);
