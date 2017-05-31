@@ -33,6 +33,11 @@ public class RetrofitManager {
     }
 
     interface RetrofitService {
+        /**
+         * @param start 起始index
+         * @param count 每页多少条数据
+         * @return 返回查询结果列表
+         */
         @GET("top250")
         Call<MovieEntity> getTopMovie(@Query("start") int start, @Query("count") int count);
     }

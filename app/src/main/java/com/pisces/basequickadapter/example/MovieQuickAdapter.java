@@ -15,7 +15,7 @@ import java.util.List;
  * Version 1.0
  */
 
-    public class MovieQuickAdapter extends BaseQuickAdapter<MovieEntity.SubjectsBean> {
+public class MovieQuickAdapter extends BaseQuickAdapter<MovieEntity.SubjectsBean> {
     private Context mContext;
 
     public MovieQuickAdapter(Context context, List<MovieEntity.SubjectsBean> data) {
@@ -31,8 +31,9 @@ import java.util.List;
                 .setText(R.id.director, "导演：" + item.getDirectors().get(0).getName())
                 .setText(R.id.actor, "主演：" + item.getCasts().get(0).getName())
                 .setText(R.id.type, "类型：" + item.getGenres().toString())
-                .setText(R.id.year, "年份：" + item.getYear());
+                .setText(R.id.year, "年份：" + item.getYear())
+                .setText(R.id.tv_num, holder.getLayoutPosition() + "");
         //setImageView
         Glide.with(mContext).load(item.getImages().getMedium()).into((ImageView) holder.getView(R.id.iv));
     }
-    }
+}
