@@ -35,4 +35,9 @@
 ![](https://github.com/piscessu/BaseQuickAdapter/blob/master/screenshots/2.png)
 ![](https://github.com/piscessu/BaseQuickAdapter/blob/master/screenshots/3.png)
 ---
+
+#### 2017-06-14更新
+1. 加入分页加载功能
+
+---
 **持续改进中。。。**
